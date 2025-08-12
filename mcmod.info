@@ -1,0 +1,8 @@
+[{
+  "modid": "horse_colors",
+  "name": "Realistic Horse Genetics",
+  "description": "All the pretty ponies!",
+  "mcversion": "1.12.2",
+  "authorList": ["sekelsta"],
+  "credits": "Thanks to faainleog for contributing many gorgeous textures, and to Mnesikos for helping backport the new features to 1.12!"
+}]

@@ -1,0 +1,85 @@
+package sekelsta.horse_colors.genetics;
+
+public class HorseAlleles
+{
+    public static final int E_RED = 0;
+    public static final int E_RED2 = 1;
+    public static final int E_RED3 = 2;
+    public static final int E_RED4 = 3;
+    public static final int E_BLACK3 = 4;
+    public static final int E_BLACK2 = 5;
+    public static final int E_BLACK1 = 6;
+    public static final int E_BLACK = 7;
+    public static final int A_BLACK = 0;
+    public static final int A_SEAL = 1;
+    public static final int A_BROWN = 2;
+    public static final int A_BAY_DARK = 3;
+    public static final int A_BAY = 4;
+    public static final int A_BAY_LIGHT = 5;
+    public static final int A_BAY_SEMIWILD = 6;
+    public static final int A_BAY_WILD = 7;
+    public static final int NONDUN2 = 0;
+    public static final int NONDUN1 = 1;
+    public static final int DUN = 2;
+    public static final int DUN_OTHER = 3;
+    public static final int NONGRAY = 0;
+    public static final int GRAY = 1;
+    public static final int NONCREAM = 0;
+    public static final int SNOWDROP = 1;
+    public static final int PEARL = 2;
+    public static final int CREAM = 3;
+    public static final int MATP_MINOR = 4;
+    public static final int NONSILVER = 0;
+    public static final int SILVER = 1;
+    public static final int LIVER = 0;
+    public static final int NONLILVER = 1;
+    public static final int FLAXEN = 0;
+    public static final int NONFLAXEN = 1;
+    public static final int NONSOOTY = 0;
+    public static final int SOOTY = 1;
+    public static final int NONMEALY = 0;
+    public static final int MEALY = 1;
+    public static final int KIT_WILDTYPE = 0;
+    public static final int KIT_WHITE_BOOST = 1;
+    public static final int KIT_MARKINGS1 = 2;
+    public static final int KIT_MARKINGS2 = 3;
+    public static final int KIT_MARKINGS3 = 4;
+    public static final int KIT_MARKINGS4 = 5;
+    public static final int KIT_MARKINGS5 = 6;
+    public static final int KIT_W20 = 7;
+    public static final int KIT_RESERVED_RABICANO = 8;
+    public static final int KIT_FLASHY_WHITE = 9;
+    public static final int KIT_UNUSED = 10;
+    public static final int KIT_TOBIANO = 11;
+    public static final int KIT_SABINO1 = 12;
+    public static final int KIT_TOBIANO_W20 = 13;
+    public static final int KIT_ROAN = 14;
+    public static final int KIT_DOMINANT_WHITE = 15;
+    public static final int NONLEOPARD = 0;
+    public static final int LEOPARD = 1;
+    public static final int NONPATN = 0;
+    public static final int PATN = 1;
+    public static final int NONFRAME = 0;
+    public static final int FRAME = 1;
+    public static final int MITF_SW1 = 0;
+    public static final int MITF_SW3 = 1;
+    public static final int MITF_SW5 = 2;
+    public static final int MITF_WILDTYPE = 3;
+    public static final int PAX3_WILDTYPE = 0;
+    public static final int PAX3_SW2 = 1;
+    public static final int PAX3_SW4 = 2;
+    public static final int PAX3_UNUSED = 3;
+    public static final int NONCHAMPAGNE = 0;
+    public static final int CHAMPAGNE = 1;
+    public static final int NONCAMEO = 0;
+    public static final int CAMEO = 1;
+    public static final int NONIVORY = 0;
+    public static final int IVORY = 1;
+    public static final int DONKEY_DUN = 0;
+    public static final int DONKEY_NONDUN_CROSS = 1;
+    public static final int DONKEY_NONDUN = 2;
+    
+    public static boolean isTobianoAllele(final int allele) {
+        return allele == 11 || allele == 13;
+    }
+}

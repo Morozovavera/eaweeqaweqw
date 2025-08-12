@@ -1,0 +1,535 @@
+{
+  "sekelsta/horse_colors/HorseColors": {
+    "name": "sekelsta/horse_colors/HorseColors",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/Mod;",
+        "target": "sekelsta/horse_colors/HorseColors",
+        "values": {
+          "acceptedMinecraftVersions": {
+            "value": "[1.12.2]"
+          },
+          "modid": {
+            "value": "horse_colors"
+          },
+          "name": {
+            "value": "Realistic Horse Colors"
+          },
+          "version": {
+            "value": "1.12.2-1.2.6"
+          }
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$Instance;",
+        "target": "instance",
+        "value": {
+          "value": "horse_colors"
+        }
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "preInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "postInit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V"
+      }
+    ]
+  },
+  "sekelsta/horse_colors/HorseDebug": {
+    "name": "sekelsta/horse_colors/HorseDebug",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "renderOverlayEvent(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V"
+      }
+    ]
+  },
+  "sekelsta/horse_colors/HorseReplacer": {
+    "name": "sekelsta/horse_colors/HorseReplacer",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "replaceHorses(Lnet/minecraftforge/event/entity/EntityJoinWorldEvent;)V"
+      }
+    ]
+  },
+  "sekelsta/horse_colors/client/HorseGui": {
+    "name": "sekelsta/horse_colors/client/HorseGui",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "replaceGui(Lnet/minecraftforge/client/event/GuiOpenEvent;)V"
+      }
+    ]
+  },
+  "sekelsta/horse_colors/config/HorseConfig": {
+    "name": "sekelsta/horse_colors/config/HorseConfig",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/common/config/Config;",
+        "target": "sekelsta/horse_colors/config/HorseConfig",
+        "values": {
+          "modid": {
+            "value": "horse_colors"
+          }
+        }
+      }
+    ]
+  },
+  "sekelsta/horse_colors/config/HorseConfig$Breeding": {
+    "name": "sekelsta/horse_colors/config/HorseConfig$Breeding",
+    "annotations": [
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "enableGenders",
+        "value": {
+          "values": [
+            "Enables or disables all features relating to gender."
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "genderlessBreedingCooldown",
+        "value": {
+          "values": [
+            "The number of ticks until horses can breed again, when genders are disabled.",
+            "The vanilla value is 6000 (or at 20 ticks per second, 5 minutes,",
+            "or at 24000 ticks per minecraft day, 1/4 day)"
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$RangeInt;",
+        "target": "genderlessBreedingCooldown",
+        "values": {
+          "min": {
+            "type": "INT",
+            "value": "0"
+          }
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "maleBreedingCooldown",
+        "value": {
+          "values": [
+            "The number of ticks until male horses can breed again.",
+            "The default value is 240 ticks (12 seconds)."
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$RangeInt;",
+        "target": "maleBreedingCooldown",
+        "values": {
+          "min": {
+            "type": "INT",
+            "value": "0"
+          }
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "femaleBreedingCooldown",
+        "value": {
+          "values": [
+            "The number of ticks until female horses can breed again.",
+            "The default value is 24000 ticks (20 minutes, or 1 minecraft day).",
+            "This must always be at least as long as pregnancyLength."
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$RangeInt;",
+        "target": "femaleBreedingCooldown",
+        "values": {
+          "min": {
+            "type": "INT",
+            "value": "0"
+          }
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "pregnancyLength",
+        "value": {
+          "values": [
+            "If genders are enabled, females will be pregnant for this many ticks.",
+            "The default value is 24000 ticks (20 minutes, or 1 minecraft day).",
+            "To disable pregnancy altogether, set this number to 0.",
+            "Lowering this will not let female horses breed again sooner unless you",
+            "also lower femaleRebreedTicks"
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$RangeInt;",
+        "target": "pregnancyLength",
+        "values": {
+          "min": {
+            "type": "INT",
+            "value": "0"
+          }
+        }
+      }
+    ]
+  },
+  "sekelsta/horse_colors/config/HorseConfig$Common": {
+    "name": "sekelsta/horse_colors/config/HorseConfig$Common",
+    "annotations": [
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "horseDebugInfo",
+        "value": {
+          "values": [
+            "If enabled, debugging information will appear on the screen when the",
+            "player is holding a stick in their left hand and looks at a horse.",
+            "For most users, it is probably better to leave this as false."
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$LangKey;",
+        "target": "horseDebugInfo",
+        "value": {
+          "value": "horse_colors.config.common.horseDebugInfo"
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "enableGroundTie",
+        "value": {
+          "values": [
+            "If enabled, horses will not wander off if they are wearing a saddle."
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$LangKey;",
+        "target": "enableGroundTie",
+        "value": {
+          "value": "horse_colors.config.common.enableGroundTie"
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "autoEquipSaddle",
+        "value": {
+          "values": [
+            "If enabled, right clicking a horse while holding a saddle or horse armor",
+            "will equip it (as long as the horse isn\u0027t already wearing something in that slot)",
+            "instead of opening the inventory."
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$LangKey;",
+        "target": "autoEquipSaddle",
+        "value": {
+          "value": "horse_colors.config.common.autoEquipSaddle"
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "blockVanillaHorseSpawns",
+        "value": {
+          "values": [
+            "If set to true, only horses created by this mod will spawn.",
+            "This mainly affects newly generated areas."
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "convertVanillaHorses",
+        "value": {
+          "values": [
+            "If enabled, each vanilla horse will be replaced by a horse",
+            "from this mod.",
+            "This matters for worlds where vanilla horses have already spawned",
+            "or will spawn."
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "horseSpawnMultiplier",
+        "value": {
+          "values": [
+            "Larger numbers make horses more common, smaller numbers make them less common.",
+            "1.0 makes them as common as in vanilla."
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$RangeDouble;",
+        "target": "horseSpawnMultiplier",
+        "values": {
+          "max": {
+            "type": "DOUBLE",
+            "value": "1000.0"
+          },
+          "min": {
+            "type": "DOUBLE",
+            "value": "0.0"
+          }
+        }
+      }
+    ]
+  },
+  "sekelsta/horse_colors/config/HorseConfig$EventHandler": {
+    "name": "sekelsta/horse_colors/config/HorseConfig$EventHandler",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventBusSubscriber;",
+        "target": "sekelsta/horse_colors/config/HorseConfig$EventHandler",
+        "values": {
+          "modid": {
+            "value": "horse_colors"
+          }
+        }
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onConfigChanged(Lnet/minecraftforge/fml/client/event/ConfigChangedEvent$OnConfigChangedEvent;)V"
+      }
+    ]
+  },
+  "sekelsta/horse_colors/config/HorseConfig$Genetics": {
+    "name": "sekelsta/horse_colors/config/HorseConfig$Genetics",
+    "annotations": [
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "useGeneticStats",
+        "value": {
+          "values": [
+            "If enabled, horses\u0027 speed, jump, and health will be determined",
+            "through genetics instead of the default Minecraft way"
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$LangKey;",
+        "target": "useGeneticStats",
+        "value": {
+          "value": "horse_colors.config.common.useGeneticStats"
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "enableHealthEffects",
+        "value": {
+          "values": [
+            "If enabled, certain genes will have a small impact on health,",
+            "as they do in real life. This does not prevent Overo Lethal",
+            "White Syndrome."
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$LangKey;",
+        "target": "enableHealthEffects",
+        "value": {
+          "value": "horse_colors.config.common.enableHealthEffects"
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "mutationChance",
+        "value": {
+          "values": [
+            "The chance for each allele to mutate. The recommended range",
+            "is between 0.0001 and 0.01.",
+            "To disable mutations, set this value to 0."
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$RangeDouble;",
+        "target": "mutationChance",
+        "values": {
+          "max": {
+            "type": "DOUBLE",
+            "value": "1.0"
+          },
+          "min": {
+            "type": "DOUBLE",
+            "value": "0.0"
+          }
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "bookShowsGenes",
+        "value": {
+          "values": [
+            "Enable or disable genetic testing."
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "bookShowsTraits",
+        "value": {
+          "values": [
+            "Enable or disable physical inspection (rough information about health, ",
+            "speed, and jump)."
+          ]
+        }
+      }
+    ]
+  },
+  "sekelsta/horse_colors/config/HorseConfig$Growth": {
+    "name": "sekelsta/horse_colors/config/HorseConfig$Growth",
+    "annotations": [
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "grayGradually",
+        "value": {
+          "values": [
+            "If enabled, gray hores will be born colored and their fur will gradually turn white."
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "yearLength",
+        "value": {
+          "values": [
+            "How long a year lasts in twenty minute Minecraft days, for age-dependent colors such as gray."
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$RangeDouble;",
+        "target": "yearLength",
+        "values": {
+          "max": {
+            "type": "DOUBLE",
+            "value": "10000.0"
+          },
+          "min": {
+            "type": "DOUBLE",
+            "value": "0.0"
+          }
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "foalsGrowGradually",
+        "value": {
+          "values": [
+            "If enabled, foals will slowly get bigger as they grow into adults."
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "growTime",
+        "value": {
+          "values": [
+            "The number of twenty minute Minecraft days that it takes for a foal to become an adult."
+          ]
+        }
+      }
+    ]
+  },
+  "sekelsta/horse_colors/entity/AbstractHorseGenetic": {
+    "name": "sekelsta/horse_colors/entity/AbstractHorseGenetic",
+    "interfaces": [
+      "sekelsta/horse_colors/genetics/IGeneticEntity"
+    ]
+  },
+  "sekelsta/horse_colors/entity/ModEntities$RegistrationHandler": {
+    "name": "sekelsta/horse_colors/entity/ModEntities$RegistrationHandler",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "registerEntities(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "catchBiomeRegistry(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      }
+    ]
+  },
+  "sekelsta/horse_colors/genetics/FakeGeneticEntity": {
+    "name": "sekelsta/horse_colors/genetics/FakeGeneticEntity",
+    "interfaces": [
+      "sekelsta/horse_colors/genetics/IGeneticEntity"
+    ]
+  },
+  "sekelsta/horse_colors/item/ModItems": {
+    "name": "sekelsta/horse_colors/item/ModItems",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "registerItems(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "registerModels(Lnet/minecraftforge/client/event/ModelRegistryEvent;)V"
+      }
+    ]
+  },
+  "sekelsta/horse_colors/renderer/HorseArmorLayer": {
+    "name": "sekelsta/horse_colors/renderer/HorseArmorLayer",
+    "interfaces": [
+      "net/minecraft/client/renderer/entity/layers/LayerRenderer"
+    ]
+  }
+}
